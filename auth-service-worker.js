@@ -23,7 +23,6 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(fetchWithFirebaseHeaders(event.request));
 });
 
-// TODO: add Firebase Authentication headers to request
 async function fetchWithFirebaseHeaders(request) {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
